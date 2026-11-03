@@ -18,3 +18,16 @@ void station_on_board(struct station *station){ // passageiro senta
     }
     pthread_mutex_unlock(&station->mutex);
 }
+
+void station_wait_for_car(struct station *station){
+    pthread_mutex_lock(&station->mutex);
+    station->waiting++;
+    while (!station->car_present || station->free_seats == 0){
+        pthread_cond_wait(&station->car_arrived, &station->mutex); // a mimir, solta lock
+    }
+    // acordou (tem carro e tem assento disponível)
+    station->waiting--;
+    station->free_seats--;
+    station->boarding++;
+    pthread_mutex_unlock(&station->mutex);
+}
