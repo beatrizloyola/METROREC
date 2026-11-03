@@ -23,8 +23,8 @@
 - [x] Implementar `station_wait_for_car` com `while` no `cond_wait` (nunca `if`, por causa de wakeups espúrios)
 - [x] Implementar `station_load_car`
 - [x] Implementar `station_on_board`
-- [ ] Criar o `Makefile` com alvos `all`, `clean` e `sync_car` (`-Wall -Wextra -pthread`), compilando `sync_car.c` + `sync_car-runner.c`
-- [ ] Primeira compilação sem warnings
+- [X] Criar o `Makefile` com alvos `all`, `clean` e `sync_car` (`-Wall -Wextra -pthread`), compilando `sync_car.c` + `sync_car-runner.c`
+- [X] Primeira compilação sem warnings
 
 ## Bloco 3 — Testes e depuração
 
