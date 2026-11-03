@@ -31,18 +31,18 @@
 - [X] Lembrar de iniciar `script -a evidencias.log` antes de compilar/testar
 - [X] Rodar o runner e registrar a saída ("Looks good!")
 - [X] Rodar o runner em loop (50 a 200 execuções) para pegar race condition, deadlock e wakeup perdido
-- [ ] Testar casos limite:
-  - [ ] `count = 0`
-  - [ ] sem passageiros
-  - [ ] passageiros > assentos
-  - [ ] assentos > passageiros
-- [ ] Testar caso inválido (ex.: `count` negativo), decidir o comportamento e documentar (sugestão: tratar `count <= 0` como `count == 0`)
+- [x] Testar casos limite (8 casos, 8 de 8 passaram e loop `ok=100 fail=0`, no `evidencias.log`; o arquivo de teste foi removido da pasta, não vai na entrega)
+  - [x] `count = 0`
+  - [x] sem passageiros
+  - [x] passageiros > assentos
+  - [x] assentos > passageiros
+- [x] Testar caso inválido (`count = -1`, PASS no log); comportamento decidido: `count <= 0` tratado como `count == 0`, retorna imediato. Falta documentar no relatório (seção 4, decisão 7)
 - [X] Rodar com `-fsanitize=thread`
 - [X] Rodar com `valgrind --tool=helgrind`
 - [X] Confirmar ausência de busy-wait (CPU ociosa durante a espera)
 - [X] Confirmar que existe um único mutex por `struct station`
-- [ ] Confirmar que não há semáforos nem outras primitivas além das permitidas
-- [ ] Anotar cada tentativa no diário (estratégia, resultado, hipótese, horário, evidência)
+- [x] Confirmar que não há semáforos nem outras primitivas além das permitidas
+- [x] Anotar cada tentativa no diário (estratégia, resultado, hipótese, horário, evidência)
 - [X] Print do bug mais relevante
 - [X] Print do teste passando
 
