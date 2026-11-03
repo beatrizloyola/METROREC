@@ -18,11 +18,11 @@
 ## Bloco 2 — Implementação
 
 - [x] Criar `sync_car.h` (struct, protótipos, include guards)
-- [ ] Criar `sync_car.c` com `#include "sync_car.h"`
-- [ ] Implementar `station_init` (`pthread_mutex_init` e `pthread_cond_init`)
-- [ ] Implementar `station_wait_for_car` com `while` no `cond_wait` (nunca `if`, por causa de wakeups espúrios)
-- [ ] Implementar `station_load_car`
-- [ ] Implementar `station_on_board`
+- [x] Criar `sync_car.c` com `#include "sync_car.h"`
+- [x] Implementar `station_init` (`pthread_mutex_init` e `pthread_cond_init`)
+- [x] Implementar `station_wait_for_car` com `while` no `cond_wait` (nunca `if`, por causa de wakeups espúrios)
+- [x] Implementar `station_load_car`
+- [x] Implementar `station_on_board`
 - [ ] Criar o `Makefile` com alvos `all`, `clean` e `sync_car` (`-Wall -Wextra -pthread`), compilando `sync_car.c` + `sync_car-runner.c`
 - [ ] Primeira compilação sem warnings
 
