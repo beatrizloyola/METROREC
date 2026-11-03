@@ -28,23 +28,23 @@
 
 ## Bloco 3 — Testes e depuração
 
-- [ ] Lembrar de iniciar `script -a evidencias.log` antes de compilar/testar
-- [ ] Rodar o runner e registrar a saída ("Looks good!")
-- [ ] Rodar o runner em loop (50 a 200 execuções) para pegar race condition, deadlock e wakeup perdido
+- [X] Lembrar de iniciar `script -a evidencias.log` antes de compilar/testar
+- [X] Rodar o runner e registrar a saída ("Looks good!")
+- [X] Rodar o runner em loop (50 a 200 execuções) para pegar race condition, deadlock e wakeup perdido
 - [ ] Testar casos limite:
   - [ ] `count = 0`
   - [ ] sem passageiros
   - [ ] passageiros > assentos
   - [ ] assentos > passageiros
 - [ ] Testar caso inválido (ex.: `count` negativo), decidir o comportamento e documentar (sugestão: tratar `count <= 0` como `count == 0`)
-- [ ] Rodar com `-fsanitize=thread`
-- [ ] Rodar com `valgrind --tool=helgrind`
-- [ ] Confirmar ausência de busy-wait (CPU ociosa durante a espera)
-- [ ] Confirmar que existe um único mutex por `struct station`
+- [X] Rodar com `-fsanitize=thread`
+- [X] Rodar com `valgrind --tool=helgrind`
+- [X] Confirmar ausência de busy-wait (CPU ociosa durante a espera)
+- [X] Confirmar que existe um único mutex por `struct station`
 - [ ] Confirmar que não há semáforos nem outras primitivas além das permitidas
 - [ ] Anotar cada tentativa no diário (estratégia, resultado, hipótese, horário, evidência)
-- [ ] Print do bug mais relevante
-- [ ] Print do teste passando
+- [X] Print do bug mais relevante
+- [X] Print do teste passando
 
 ## Bloco 4 — Documentação
 
