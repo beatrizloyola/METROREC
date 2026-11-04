@@ -48,12 +48,12 @@
 
 ## Bloco 4 — Documentação
 
-- [ ] README:
-  - [ ] descrição de cada arquivo `.c`/`.h`
-  - [ ] como compilar
-  - [ ] como executar
-  - [ ] como testar
-  - [ ] SO usado (`uname -a`, `gcc --version`)
+- [X] README:
+  - [X] descrição de cada arquivo `.c`/`.h`
+  - [X] como compilar
+  - [X] como executar
+  - [X] como testar
+  - [X] SO usado (`uname -a`, `gcc --version`)
 - [ ] Relatório em PDF (formato do Guia de Relatórios):
   - [ ] 1. Objetivo (3–5 linhas)
   - [ ] 2. Checklist de requisitos (status + como testar)
