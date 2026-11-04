@@ -631,3 +631,211 @@ loyola@loyola-dell-g15:~/Documents/blgv$ exit
 exit
 
 Script done on 2026-11-03 19:36:15-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-11-04 09:11:32-03:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="71" LINES="24"]
+loyola@loyola-dell-g15:~/Documents/blgv$ top -H -b -n 3 -d 2 -p $(pgrep teste_busy)
+top: option requires an argument -- 'p'
+loyola@loyola-dell-g15:~/Documents/blgv$ make
+gcc -Wall -Wextra -pthread -o sync_car sync_car.c sync_car-runner.c
+sync_car-runner.c: In function ‘alarm_handler’:
+sync_car-runner.c:54:24: warning: unused parameter ‘foo’ [-Wunused-parameter]
+   54 | void alarm_handler(int foo)
+      |                    ~~~~^~~
+loyola@loyola-dell-g15:~/Documents/blgv$ top -H -b -n 3 -d 2 -p $(pgrep teste_busy)
+top: option requires an argument -- 'p'
+loyola@loyola-dell-g15:~/Documents/blgv$ gcc -Wall -Wextra -pthread -o teste_busy teste_busy.c sync_car.c
+./teste_busy A &
+sleep 2
+top -H -b -n 3 -d 2 -p $(pgrep teste_busy)
+wait
+[1] 71254
+cenario A: pid=71254, aguardando 12 s
+top - 09:13:15 up 15:52,  1 user,  load average: 0,85, 0,88, 1,08
+Threads:  21 total,   0 running,  21 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0,8 us,  0,0 sy,  0,0 ni, 98,4 id,  0,8 wa,  0,0 hi,  0,0 si,
+MiB Mem :  15763,8 total,    260,3 free,   9620,1 used,   6907,6 buff/c
+MiB Swap:   2048,0 total,   2047,4 free,      0,6 used.   6143,7 avail
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+
+  71254 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71256 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71257 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71258 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71259 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71260 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71261 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71262 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71263 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71264 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71265 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71266 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71267 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71268 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71269 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71270 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71271 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71272 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71273 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71274 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71275 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+
+top - 09:13:17 up 15:52,  1 user,  load average: 0,85, 0,88, 1,08
+Threads:  21 total,   0 running,  21 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  1,8 us,  0,9 sy,  0,0 ni, 97,0 id,  0,0 wa,  0,0 hi,  0,2 si,
+MiB Mem :  15763,8 total,    260,3 free,   9620,1 used,   6907,6 buff/c
+MiB Swap:   2048,0 total,   2047,4 free,      0,6 used.   6143,7 avail
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+
+  71254 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71256 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71257 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71258 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71259 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71260 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71261 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71262 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71263 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71264 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71265 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71266 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71267 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71268 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71269 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71270 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71271 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71272 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71273 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71274 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71275 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+
+top - 09:13:19 up 15:52,  1 user,  load average: 0,85, 0,88, 1,08
+Threads:  21 total,   0 running,  21 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  5,7 us,  1,5 sy,  0,0 ni, 92,7 id,  0,0 wa,  0,0 hi,  0,1 si,
+MiB Mem :  15763,8 total,    266,9 free,   9613,5 used,   6908,1 buff/c
+MiB Swap:   2048,0 total,   2047,4 free,      0,6 used.   6150,3 avail
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+
+  71254 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71256 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71257 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71258 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71259 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71260 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71261 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71262 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71263 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71264 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71265 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71266 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71267 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71268 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71269 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71270 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71271 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71272 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71273 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71274 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+  71275 loyola    20   0  166616   1900   1632 S   0,0   0,0   0:00.00
+fim
+[1]+  Done                    ./teste_busy A
+loyola@loyola-dell-g15:~/Documents/blgv$ gcc -Wall -Wextra -pthread -o teste_busy teste_busy.c sync_car.c
+./teste_busy B &
+sleep 2
+top -H -b -n 3 -d 2 -p $(pgrep teste_busy)
+wait
+[1] 71492
+cenario B: pid=71492, aguardando 12 s
+top - 09:13:49 up 15:52,  1 user,  load average: 0,64, 0,83, 1,06
+Threads:  22 total,   0 running,  22 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 10,7 us,  0,8 sy,  0,0 ni, 88,5 id,  0,0 wa,  0,0 hi,  0,0 si,
+MiB Mem :  15763,8 total,    314,0 free,   9558,4 used,   6903,4 buff/c
+MiB Swap:   2048,0 total,   2047,4 free,      0,6 used.   6205,5 avail
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+
+  71492 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71494 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71495 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71496 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71497 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71498 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71499 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71500 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71501 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71502 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71503 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71504 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71505 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71506 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71507 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71508 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71509 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71510 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71511 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71512 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71513 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71534 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+
+top - 09:13:51 up 15:52,  1 user,  load average: 0,59, 0,82, 1,05
+Threads:  22 total,   0 running,  22 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  3,6 us,  0,4 sy,  0,0 ni, 95,9 id,  0,0 wa,  0,0 hi,  0,1 si,
+MiB Mem :  15763,8 total,    314,0 free,   9558,4 used,   6903,4 buff/c
+MiB Swap:   2048,0 total,   2047,4 free,      0,6 used.   6205,5 avail
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+
+  71492 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71494 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71495 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71496 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71497 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71498 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71499 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71500 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71501 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71502 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71503 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71504 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71505 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71506 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71507 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71508 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71509 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71510 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71511 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71512 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71513 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71534 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+
+top - 09:13:53 up 15:52,  1 user,  load average: 0,59, 0,82, 1,05
+Threads:  22 total,   0 running,  22 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  1,5 us,  0,6 sy,  0,0 ni, 97,7 id,  0,0 wa,  0,0 hi,  0,1 si,
+MiB Mem :  15763,8 total,    303,5 free,   9563,9 used,   6908,4 buff/c
+MiB Swap:   2048,0 total,   2047,4 free,      0,6 used.   6199,9 avail
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+
+  71492 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71494 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71495 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71496 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71497 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71498 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71499 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71500 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71501 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71502 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71503 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71504 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71505 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71506 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71507 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71508 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71509 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71510 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71511 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71512 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71513 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+  71534 loyola    20   0  174812   1908   1632 S   0,0   0,0   0:00.00
+fim
+[1]+  Done                    ./teste_busy B
+loyola@loyola-dell-g15:~/Documents/blgv$ exit
+exit
+
+Script done on 2026-11-04 09:14:02-03:00 [COMMAND_EXIT_CODE="0"]

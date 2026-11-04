@@ -3,3 +3,5 @@ sync_car.o
 sync_car
 sync_car_tsan
 /prints
+/relatorio
+/testes

@@ -36,7 +36,7 @@
   - [x] sem passageiros
   - [x] passageiros > assentos
   - [x] assentos > passageiros
-- [x] Testar caso inválido (`count = -1`, PASS no log); comportamento decidido: `count <= 0` tratado como `count == 0`, retorna imediato. Falta documentar no relatório (seção 4, decisão 7)
+- [x] Testar caso inválido (`count = -1`, PASS no log); comportamento decidido: `count <= 0` tratado como `count == 0`, retorna imediato. Documentado no relatório (seção 4, decisão 6)
 - [X] Rodar com `-fsanitize=thread`
 - [X] Rodar com `valgrind --tool=helgrind`
 - [X] Confirmar ausência de busy-wait (CPU ociosa durante a espera)
@@ -54,20 +54,20 @@
   - [X] como executar
   - [X] como testar
   - [X] SO usado (`uname -a`, `gcc --version`)
-- [ ] Relatório em PDF (formato do Guia de Relatórios):
-  - [ ] 1. Objetivo (3–5 linhas)
-  - [ ] 2. Checklist de requisitos (status + como testar)
-  - [ ] 3. Como reproduzir (comandos reais e copiáveis)
-  - [ ] 4. Arquitetura (arquivos, responsabilidades, decisões técnicas)
-  - [ ] 5. Estratégias e diário de desenvolvimento (5.1 e 5.2, ordem cronológica batendo com `evidencias.log`)
-  - [ ] 6. Evidências (log + prints)
-  - [ ] 7. Uso de IA (preencher mesmo que seja "não utilizei")
-  - [ ] 8. Reflexão final (5–8 linhas)
-  - [ ] 9. Checklist final de entrega
-  - [ ] 10. "Se eu tivesse mais 2 horas" (5–10 linhas)
-- [ ] Incluir dificuldades e o que não foi implementado, com justificativa
-- [ ] Conferir que prints, log e relato não se contradizem
-- [ ] Remover frases genéricas ou vazias
+- [x] Relatório em PDF (formato do Guia de Relatórios):
+  - [x] 1. Objetivo (3–5 linhas)
+  - [x] 2. Checklist de requisitos (status + como testar)
+  - [x] 3. Como reproduzir (comandos reais e copiáveis)
+  - [x] 4. Arquitetura (arquivos, responsabilidades, decisões técnicas)
+  - [x] 5. Estratégias e diário de desenvolvimento (5.1 e 5.2, ordem cronológica batendo com `evidencias.log`)
+  - [x] 6. Evidências (log + prints)
+  - [x] 7. Uso de IA (preencher mesmo que seja "não utilizei")
+  - [x] 8. Reflexão final (5–8 linhas)
+  - [x] 9. Checklist final de entrega
+  - [x] 10. "Se eu tivesse mais 2 horas" (5–10 linhas)
+- [x] Incluir dificuldades e o que não foi implementado, com justificativa
+- [x] Conferir que prints, log e relato não se contradizem
+- [x] Remover frases genéricas ou vazias
 
 ## Bloco 5 — Empacotamento e entrega
 
@@ -83,16 +83,16 @@
   - [ ] README
   - [ ] Makefile
   - [ ] `evidencias.log`
-- [ ] Nomear o relatório `blgv.pdf` e colocar uma cópia no repositório
+- [x] Nomear o relatório `blgv.pdf` e colocar uma cópia no repositório
 - [ ] Push no GitHub com README e PDF
 - [ ] Enviar no Classroom: `blgv.pdf` + `blgv.tar` + link do GitHub
 - [ ] Conferir nomes: diretório `blgv/`, `blgv.tar`, `blgv.pdf`
 
 ## Checklist final do guia (seção 9)
 
-- [ ] Compilei do zero seguindo só o que está no relatório
-- [ ] Rodei os testes e `evidencias.log` foi gerado
-- [ ] Tenho prints obrigatórios
-- [ ] Testei pelo menos um caso limite e um caso inválido
-- [ ] Preenchi a seção de uso de IA
-- [ ] Revisei o relatório e removi frases genéricas / vazias
+- [x] Compilei do zero seguindo só o que está no relatório
+- [x] Rodei os testes e `evidencias.log` foi gerado
+- [x] Tenho prints obrigatórios
+- [x] Testei pelo menos um caso limite e um caso inválido
+- [x] Preenchi a seção de uso de IA
+- [x] Revisei o relatório e removi frases genéricas / vazias
